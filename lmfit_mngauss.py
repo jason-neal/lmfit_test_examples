@@ -29,7 +29,7 @@ def lmfit_mngauss(x,y, *params):
     m_mods = []
     prefixes = []
     for i in range(0, len(m_params), 3):
-        pref = "gm%02i_" % (i/3)
+        pref = "gm{0:02d}_".format((i/3))
         gauss_i = GaussianModel(prefix=pref)
 
         if i == 0:
@@ -63,7 +63,7 @@ def lmfit_mngauss(x,y, *params):
         n_mods = []
         #prefixes = []
         for j in range(0, len(n_params), 3):
-            pref = "gn%02i_" % (j/3)
+            pref = "gn{0:02d}_".format((j/3))
             gauss_j = GaussianModel(prefix=pref)
             pars.update(gauss_j.make_params())
         
