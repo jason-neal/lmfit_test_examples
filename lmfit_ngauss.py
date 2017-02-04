@@ -25,7 +25,7 @@ def lmfit_ngauss(x,y, params):
   mods = []
   prefixes = []
   for i in range(0, len(params), 3):
-    pref = "g%02i_" % (i/3)
+    pref = "g{0:02d}_".format((i/3))
     gauss_i = GaussianModel(prefix=pref)
 
     if i == 0:
@@ -74,7 +74,7 @@ def lmfit_ngauss_constrains(x,y, params, constrains):
   mods = []
   prefixes = []
   for i in range(0, len(params), 3):
-    pref = "g%02i_" % (i/3)
+    pref = "g{0:02d}_".format((i/3))
     gauss_i = GaussianModel(prefix=pref)
 
     if i == 0:
